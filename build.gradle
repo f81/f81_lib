@@ -1,0 +1,37 @@
+def jdkVersion = 1.7
+def enc = 'UTF-8'
+
+apply {
+	plugin 'java'
+	plugin 'eclipse'
+}
+
+repositories { mavenCentral() }
+
+dependencies {
+	// http://search.maven.org/
+	compile 'commons-lang:commons-lang:2.6'
+	compile 'commons-io:commons-io:2.4'
+	compile 'commons-collections:commons-collections:3.2.1'
+	compile 'commons-codec:commons-codec:1.7'
+	compile 'com.yahoo.platform.yui:yuicompressor:2.4.7'
+	compile 'org.jsoup:jsoup:1.7.1'
+	testCompile 'junit:junit:4.8.2'
+}
+
+test { systemProperties 'property': 'value' }
+
+eclipse { pathVariables 'GRADLE_USER_HOME': gradle.gradleUserHomeDir }
+
+sourceCompatibility = jdkVersion
+targetCompatibility = jdkVersion
+[compileJava, compileTestJava].each{ it.options.encoding = enc }
+
+jar {
+	manifest {
+		mainAttributes 'Main-Class' : 'com.fringe81.duck.CrawlerUrlbatch'
+		def manifestClasspath = configurations.compile.collect{File file -> file.name}.join(' ')
+		attributes 'Class-Path' : manifestClasspath + ' ' + resources
+	}
+}
+
