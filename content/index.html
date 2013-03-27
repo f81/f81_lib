@@ -1,0 +1,171 @@
+﻿<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">-->
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+<!--<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+-->
+<meta charset="utf-8" />
+<title>HTML5 Engineer Study</title>
+<link href="css/layout.css" rel="stylesheet" />
+<script type="text/javascript" src="js/lib/jquery.js"></script>
+<script type="text/javascript" src="js/lib/jquery.smoothScroll.js"></script>
+</head>
+<body>
+<!--header//-->
+<header>
+  <hgroup>
+    <h1>HTML5 + CSS3</h1>
+  </hgroup>
+  <ul>
+    <li><a href="#01">Gradation</a></li>            
+    <li><a href="#02">Borderline</a></li>
+    <li><a href="#03">Typography</a></li>
+  </ul>
+</header>
+<!--//header-->
+<!--section//-->
+<section>
+  <article>
+        <h2>概要</h2>
+        HTML5自体はAPIやJSを使う、拡張的な土台としての進化したHTMLであり、CSS3はより拡張性を持ったサイトデザインができるCSSです。
+        <br />
+        極力<strong>画像を使わない、flashを使わない、JSを使わない</strong>で、リッチなコンテンツを作るために、HTML5とCSS3を使用したテクニックを紹介していきたいと思います。まずは<strong>CSS3の装飾</strong>から。ChromeとFirefoxで見え方は違います。webkit/moz指定も忘れずに。
+        対応ブラウザは<strong>Chrome 10,Firefox 3.6,Safari 5.0,IE 9 以上</strong>です。
+        </p>
+  </article>
+  <article id="01">
+     <h2>Gradation グラデーション</h2>  
+        <p><strong>linear-gradient</strong>では、線形のグラデーションが作成できます。</p>
+        <div class="code">        
+        <code>
+            /* Firefox */<br />
+            background: -moz-<strong>linear</strong>-gradient(top, #FFFFFF,&#160;&#160;#91D0D8 3%, #003366);<br />
+            /* Safari,Google Chrome */<br />
+            background: -webkit-gradient(<strong>linear</strong>, left top, left bottom, from(#FFFFFF), color-stop(0.03, #91D0D8), to(#144976));<br />
+        }<br />
+        </code>
+        </div>
+		<p class="demo">DEMO</p>
+        <h4 class="Gradient01">TITLE</h4>
+        <br style="clear:both" >
+        <p><strong>radial-gradient</strong>では、放射状線のグラデーションが作成できます。</p>
+        <div class="code">
+        <code>
+            /* Firefox */<br />
+            background: -moz-<strong>radial</strong>-gradient(top right, circle, #91D0D8 0px, #144976 35px, #32698D 40px, #144976 70px, #32698D 75px, #144976 110px);<br />
+            /* Safari,Google Chrome */<br />
+            background: -webkit-gradient(<strong>radial</strong>, right top, 0, right top, 110, from(#91D0D8), color-stop(35%, #144976), color-stop(40%, #32698D), color-stop(70%, #144976), color-stop(75%, #32698D), to(#144976));<br />
+            color:#CCC;<br />
+        
+        </code>
+        </div>
+		<p class="demo">DEMO</p>
+        <h4 class="Gradient02">TITLE</h4>
+        <br style="clear:both" >
+        <div id="02"></div>
+        <h2>Borderline ボーダーライン</h2>    
+        <p>デザイナー泣かせの角丸が簡単にできます！<strong>border-radius</strong>で、角丸の大きさを指定するだけ！</p>
+        <div class="code">        
+        <code>
+        .sample {<br />
+            <strong>border-radius</strong>: 20px;<br />
+            -webkit-border-radius: 20px;<br />
+            -moz-border-radius: 20px;<br />
+        }<br />
+        </code></div>
+        <p >DEMO</p>
+        <p class="sample">border-radius "same" Sample</p>
+        
+        <div class="code">        
+        <code>
+            border-radius: 20px 40px 80px 60px;<br />
+            -webkit-border-radius: 20px 40px 80px 60px;<br />
+            -moz-border-radius: 20px 40px 80px 60px;<br />
+        </code>
+        </div>
+        <p >DEMO</p>
+        <p class="sample different">border-radius "different" Sample</p>
+        <p>点線や二重線での応用もできます。</p>
+        <div class="code">        
+        <code>
+        点線<br />
+            border: #0A8B91 2px <strong>dashed</strong>;<br />
+        細かい点線<br />    
+            border: #0A8B91 2px <strong>dotted</strong>;<br />
+        二重線<br />    
+            border: #0A8B91 3px <strong>double</strong>;
+        </code>
+        </div>
+        <p>
+        <p >DEMO</p><div class="sample type1" style="float:left; margin:0 10px 10px 0;">dashed Sample</div>
+        <div class="sample type2" style="float:left;">dotted Sample</div>
+        <div style="clear:both"></div>
+        <p >DEMO</p>
+        <div class="sample type3">double Sample</div></p>
+    <div id="03"></div><h2>シャドウをつけたタイポグラフィ</h2>
+        <p>たったひとつのプロパティで作れる表現豊かなタイポグラフィ！
+        <strong>text-shadow</strong>プロパティ<br />
+        text-shadowのキホン: <strong>X方向の距離、 Y方向の距離、 ぼかしの距離、 影の色</strong>;    </p>
+        <div class="code">        
+        <code>
+        text-shadow: 10px 10px 1px #BDBDBD;
+        </code>
+        </div>
+        <p class="demo">DEMO</p>
+        <p class="logo1">Shadow Typography</p>
+        <div class="code">        
+        <code>
+        text-shadow: 0 0 20px #F06;
+        </code>
+        </div>
+        <p class="demo">DEMO</p>
+        <p class="logo2">Glow Typography</p>
+        <div class="code">        
+        <code>
+        text-shadow: 1px 0 0 #666666, 0 1px 0 #666666, -1px 0 0 #666666, 0 -1px 0 #666666;
+        </code>
+        </div>
+        <p class="demo">DEMO</p>        
+        <p class="logo3">Stroke Typography</p>
+        <div class="code">        
+        <code>
+        text-shadow: -1px -1px 1px #FFFFFF, 1px 1px 1px #666666;
+        </code>
+        </div>
+        <p class="demo">DEMO</p>        
+        <p class="logo4">Bevel Typography</p>
+        <div class="code">        
+        <code>
+        text-shadow: -1px -1px 1px #666666, 1px 1px 1px #FFFFFF;
+        </code>
+        </div>
+        <p class="demo">DEMO</p>        
+        <p class="logo5">Emboss Typography</p>
+        <div class="code">        
+        <code>
+        text-shadow: 0 5px 0 #CCCCCC, 2px 4px 4px #666666;
+        </code>
+        </div>
+        <p class="demo">DEMO</p>        
+        <p class="logo6">Solid Typography</p>
+        text-shadowは何度でも指定できることを利用して、白文字の周りに白、緑のぼかしを５回ほど繰り返して加える。そうすると、発光する、ネオンのような表現が可能になります。<br />    
+        
+        <div class="code">        
+        <code>
+        text-shadow: 0 0 5px #FFFFFF, 0 0 40px #00CCCC, 0 0 60px #00CCCC, 0 0 100px #00FFFF, 0 0 120px #00FFFF;
+        </code>
+        </div>
+        <p class="demo">DEMO</p>        
+        <p class="logo7">Neon Typography</p>
+　</article>
+</section>
+<!--//section-->    
+<!--footer//-->  
+<footer>
+  <p>fringe81</p>
+</footer>
+<!--//footer-->      
+</body>
+</html>

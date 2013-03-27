@@ -1,0 +1,282 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+    background:#aaa;
+	font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    color:#000;
+    margin:20px auto;
+    text-align:center;
+    line-height:1.5em;
+    width:960px;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family:"ＭＳ ゴシック", sans-serif;
+    font-weight:lighter;
+}
+
+h4{
+	font-size:20px;
+	padding:0;
+	font-weight:bold
+}
+
+strong{
+	color: #F06;
+	text-decoration:none;
+	font-weight:normal
+}
+
+a:link, a:visited {
+	color:#fff;
+	text-decoration:none;
+}
+
+.active{color:#CF0;}
+
+a:hover {
+	color:#CF0;
+}
+header, nav, section, footer {
+    display:block;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    -webkit-box-shadow: 0px 0px 4px #fff;
+    -moz-box-shadow: 0px 0px 4px #fff;
+    box-shadow: 0px 0px 4px #fff;
+    border: 1px solid #d3d3d3;
+    background-color: #fff;
+    margin:5px;
+    padding: 0 20px 10px 20px;
+    font-size: 12pt;
+    color: #000;
+    text-align: left;
+
+}
+header {
+	text-align:center;
+	padding:30px;
+/* グラデーション機能 */
+	/* Firefox */	
+	background-image: -moz-linear-gradient(top, #35482a, #080a06, #000000 );
+	/* Safari,Google Chrome */
+	background: -webkit-gradient(linear, left top, left bottom, from(#35482a), color-stop(0.5, #080a06), to(#000000));	
+	background-color: #330;
+	border:none;
+	color:#fff;
+	text-shadow: 0px 0px 4px #000000;
+	width: 100%;
+	margin:0;	
+}
+
+header h1 {
+    font-size:2.3em;
+    text-transform:none;
+    letter-spacing:0em;
+}
+header h2 {
+    margin:-10px 0px 20px;
+    font-size:1.3em;
+}
+header ul {
+    padding:0px;
+    list-style-type:none;
+    display:inline;
+}
+header li {
+    margin:0px 10px;
+    padding:0px;
+    list-style-type:none;
+    display:inline;
+}
+header a:link {
+    font-weight:normal;
+}
+section {
+    width:100%;
+    text-align:left;
+    margin-bottom:10px;
+}
+section h2, nav h1 {
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	background-color:#222;
+	color:#fff;
+	padding:10px;
+	margin:10px -10px;
+	text-shadow:1px 1px 5px #000;
+	font-weight:bold
+}
+
+section h4 {
+	color:#333;
+	padding: 5px;
+	margin:10px -10px;
+	text-shadow:1px 1px 1px #eee;
+}
+
+section ul {
+    padding:0px;
+    list-style:none;
+    border-top:1px solid #e7e2d7;
+    margin:14px 0px;
+}
+section li {
+    margin:0px;
+    padding:0px;
+    list-style:none;
+}
+section li a:link, section li a:visited {
+    float:left;
+    width:96%;
+    padding:3px 1%;
+    border-bottom:1px solid #e7e2d7;
+}
+section li a:hover {
+    background:#f2f1ec;
+}
+section p {
+    font-size:0.9em;
+}
+article {
+    margin:0 0 30px 0;
+	font-size:13px
+}
+footer {
+	clear:both !important;
+	background-color: #330;
+	border:none;
+	color:#fff;
+	font-size:0.8em;
+	text-align:center;
+	width:100%
+}
+footer a {
+    margin:0px 5px;
+}
+footer p {
+	position: relative;
+	top: 10px;	
+}
+
+/* グラデーション機能 */
+
+.code {font-size:12px; border:1px solid #666;
+padding:10px;}
+
+.demo {
+	float: left;
+}
+
+.Gradient01	{
+	/* Firefox */
+	background: -moz-linear-gradient(top, #FFFFFF,  #91D0D8 3%, #003366);
+	/* Safari,Google Chrome */
+	background: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), color-stop(0.03, #91D0D8), to(#144976));
+	width: 880px;
+	float: right;
+	margin-right: 10px;
+	color:#FFF
+}
+
+.Gradient02	{
+	/* Firefox */
+	background: -moz-radial-gradient(top right, circle, #91D0D8 0px, #144976 35px, #32698D 40px, #144976 70px, #32698D 75px, #144976 110px);
+	/* Safari,Google Chrome */
+	background: -webkit-gradient(radial, right top, 0, right top, 110, from(#91D0D8), color-stop(35%, #144976), color-stop(40%, #32698D), color-stop(70%, #144976), color-stop(75%, #32698D), to(#144976));
+	width: 880px;
+	float: right;
+	margin-right: 10px;
+	color:#FFF
+}
+
+/* 角丸機能 */
+
+.sample {
+	border-radius: 20px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	width: 260px;
+	height: 80px;
+	line-height: 80px;
+	border: #333 2px solid;
+	background-color: #FFFFFF;
+	text-align: center;
+}
+.different {
+	border-radius: 20px 40px 80px 60px;
+	-webkit-border-radius: 20px 40px 80px 60px;
+	-moz-border-radius: 20px 40px 80px 60px;
+	/*
+	border-top-left-radius: 20px;
+	border-top-right-radius: 40px;
+	border-bottom-left-radius: 60px;
+	border-bottom-right-radius: 80px;
+	-webkit-border-top-left-radius: 20px;
+	-webkit-border-top-right-radius: 40px;
+	-webkit-border-bottom-left-radius: 60px;
+	-webkit-border-bottom-right-radius: 80px;
+	-moz-border-radius-topleft: 20px;
+	-moz-border-radius-topright: 40px;
+	-moz-border-radius-bottomleft: 60px;
+	-moz-border-radius-bottomright: 80px;
+	*/
+}
+.type1 {
+	border: #333 2px dashed;
+}
+.type2 {
+	border: #333 2px dotted;
+}
+.type3 {
+	border: #333 3px double;
+}
+
+/* たいぽぐらふぃ */
+
+p{display:block}
+
+p.logo1 {
+	font-size:30px;
+	color: #333333;
+	text-shadow: 10px 10px 1px #BDBDBD;
+}
+p.logo2 {
+	font-size:30px;
+	color: #FFFFFF;
+	text-shadow: 0 0 20px #333;
+}
+p.logo3 {
+	font-size:30px;
+	color:#CDCDCD;
+	text-shadow: 1px 0 0 #666666, 0 1px 0 #666666, -1px 0 0 #666666, 0 -1px 0 #666666;
+}
+p.logo4 {
+	font-size:30px;
+	color: #CDCDCD;
+	text-shadow: -1px -1px 1px #FFFFFF, 1px 1px 1px #666666;
+}
+p.logo5 {
+	font-size:30px;
+	color: #CDCDCD;
+	text-shadow: -1px -1px 1px #666666, 1px 1px 1px #FFFFFF;
+}
+p.logo6 {
+	font-size:30px;
+	color: #333;
+	text-shadow: 0 5px 0 #CCCCCC, 2px 4px 4px #666666;
+}
+p.logo7 {
+	font-size:30px;
+	color: #FFFFFF;
+	text-align: center;
+	text-shadow: 0 0 5px #FFFFFF, 0 0 40px #00CCCC, 0 0 60px #00CCCC, 0 0 100px #00FFFF, 0 0 120px #00FFFF;
+	background-color: #000000;
+	width: 480px;
+	height: 100px;
+	line-height: 100px;
+}
+
+
